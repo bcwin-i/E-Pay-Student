@@ -15,7 +15,7 @@ const Welcome = () => {
   };
 
   return <>
-      <Header/>
+      <Header page={"welcome"}/>
       <IntroSection />
       <ServicesSection handleScreen={handleScreen}/>
       <AccountAccessForm screen={screen}

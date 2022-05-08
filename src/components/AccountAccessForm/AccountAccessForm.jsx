@@ -21,6 +21,7 @@ import {
 } from "./AccountAccessFormStyles";
 
 import { colors } from "../../utils/colors";
+import { useNavigate } from "react-router-dom";
 
 const type = [
   {
@@ -44,6 +45,7 @@ const type = [
 ];
 
 export const AccountAccessForm = ({ screen, isOpen, closeAccess }) => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [password2, setPassword2] = useState("");
@@ -53,6 +55,7 @@ export const AccountAccessForm = ({ screen, isOpen, closeAccess }) => {
   const handleSignin = () => {
     setLoading(true);
     try {
+      navigate("/homepage/Dashboard")
       console.log("On");
     } catch (e) {
       console.error("Login failed: ", e);
